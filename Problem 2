@@ -1,0 +1,14 @@
+answer = 0
+temp = 0
+first_num = 1
+second_num = 2
+
+while second_num < 4e6:
+    temp = first_num + second_num
+    first_num = second_num
+    second_num = temp
+    
+    if first_num % 2 == 0:
+        answer += first_num
+
+print answer, first_num
