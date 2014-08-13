@@ -1,4 +1,4 @@
-My_Euler_Practice
+My Euler Practice
 =================
 
 My Code for Project Euler Problem
