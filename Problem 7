@@ -1,0 +1,15 @@
+def is_prime(a):
+    for i in range(2, a):
+        if a%i == 0:
+            return False
+    else:
+        return True
+
+n = 2
+iteration = 0
+while iteration < 10001:
+    if is_prime(n):
+        iteration += 1
+    n += 1
+
+print n-1
