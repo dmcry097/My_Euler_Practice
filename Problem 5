@@ -1,0 +1,28 @@
+def get_gcd(a, b):
+    """
+    Find the GCD of two numbers
+    """
+    max_num = max(a, b)
+    min_num = min(a, b)
+    temp = 0
+    while max_num%min_num != 0:
+        temp = min_num
+        min_num = max_num%min_num
+        max_num = temp
+    return min_num
+
+def get_lcm(a, b):
+    """
+    Find the LCM of two numbers
+    """
+    return (a*b)/get_gcd(a, b)
+
+numbers = range(1,21)
+gcd = 1
+lcm = 1
+for i in range(len(numbers)):
+    gcd = get_gcd(gcd, numbers[i])
+    lcm = get_lcm(lcm, numbers[i])
+    i += 1
+
+print gcd, lcm
